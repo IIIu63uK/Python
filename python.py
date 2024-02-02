@@ -1,2 +1,3 @@
-dict = {x: x**2 for x in range(1, 11)}
-print(dict)
+magicians = ['alice', 'david', 'carolina']
+for magician in magicians:
+    print(magician)
