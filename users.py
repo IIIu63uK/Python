@@ -7,4 +7,4 @@ for user in new_users:
     if user in current_users:
         print(f"{user} is not available, need choose other name.")
     else:
-        print(f"Name {user} is available.")11
+        print(f"Name {user} is available.")
