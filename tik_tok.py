@@ -1,3 +1,5 @@
+import random
+
 # Инициализация игрового поля
 board = [' ' for _ in range(9)]
 
@@ -14,13 +16,12 @@ def print_board():
 # Функция для обработки хода игрока
 def player_move(icon):
     if icon == 'X':
-        number = 1
+        print("Your turn player 1")
+        choice = int(input("Enter your move (1-9): ").strip())
     elif icon == 'O':
-        number = 2
+        print("Computer's turn")
+        choice = random.choice([i for i, x in enumerate(board) if x == " "]) + 1
 
-    print("Your turn player {}".format(number))
-
-    choice = int(input("Enter your move (1-9): ").strip())
     if board[choice - 1] == ' ':
         board[choice - 1] = icon
     else:
