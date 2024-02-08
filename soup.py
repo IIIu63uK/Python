@@ -2,14 +2,14 @@
 # pip install requests
 # pip install beautifulsoup4
 
-import requests
+import site_status
 from bs4 import BeautifulSoup
 
 # URL of the webpage you want to scrape
 url = 'https://google.com'
 
 # Send a GET request to the URL
-response = requests.get(url)
+response = site_status.get(url)
 
 # Check if the request was successful (status code 200)
 if response.status_code == 200:
